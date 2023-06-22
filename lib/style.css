@@ -15,22 +15,21 @@
   font-family: roboto, verdana, sans-serif;
 }
 body{
-  background-color: #b42a2a;  
+  background-color: #e2e2e2;  
   display: grid;
-  place-content: center;
   width: 100%;
   height: 100vh;
-  margin: auto;
   padding: 15px;
 }
 
 .wrapper{
   display: grid;
   grid-template-columns: 1fr;
-  max-width: 100%;
+  margin: 0 auto;
   padding: 15px;
   border-radius: 10px;
-  height: 90vh;
+  min-width: 320px;
+  max-width: 65%;
   background-color: #fff;
   box-shadow: 5px 10px 15px var(--shadow);
  
@@ -47,7 +46,8 @@ body{
 }
 .box{
   display: grid;
-  grid-template-columns: 1fr 2fr; 
+  grid-template-columns: 1fr 2fr;
+  padding: 10px;
   height: 60vh;
 }
 .box-title {
@@ -90,6 +90,7 @@ body{
   background-color: var(--green2);
   border-radius: 5px;
   margin: 0 5px;
+  height: 90%;
 }
 .form-notas {
   display: flex;
@@ -183,16 +184,14 @@ input {
   .wrapper{
     margin: 10px;
     padding: 0;
-    height: auto;
-    
+        
   }
   .header {
     display: flex;
     flex-direction: column;    
-    height: 100%;
-    background-color: #c3e2c1;
-    padding: 0 10px;
-    margin: 8px;
+    max-height: 100%;
+    padding: 5px;
+    margin: 5px;
     text-align: center;
     
   }
@@ -222,9 +221,10 @@ input {
     display: none ;
   }
   .r-box {
+    height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
     width: 95%;
+    height: 95%;
     margin: 20px 10px;
   }
   .form-item {
@@ -238,11 +238,12 @@ input {
 
   
 }
-@media  (max-width: 768px) {
+@media (max-width: 768px){
   .wrapper{
-    margin: 10px;
+    margin: 0 auto;
     padding: 0;
-   
+   height: 100%;
+   width: 85%;
     
   }
   .box{
@@ -259,8 +260,8 @@ input {
   .r-box {
     display: grid;
     grid-template-columns: 1fr;
-    
-    width: 95%;
+    height: 98%;
+    width: 95%;    
     
   }
   .form-item {
@@ -268,5 +269,20 @@ input {
     margin: 4px;
     border-radius: 1.5rem;
   }
+}
+
+@media (min-with:1080px) and (orientation: landscape){
+  .wrapper{
+    margin: 10px auto;
+    padding: 0;
+    min-width: 95%;   
+    min-height: 95%;   
+    
+  }
+  .r-box .box {
+    width: 95%;  
+    
+  }
+
 }
 
