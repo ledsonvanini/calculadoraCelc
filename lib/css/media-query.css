@@ -69,11 +69,14 @@
   
 }
 @media screen and (min-width: 600px) and (max-width: 768px){
+  body{
+    padding: 0;
+    width: 100%;
+  }
   .wrapper{
     margin: 0 auto;
-    padding: 0;
-   height: 100%;
-   width: 85%;
+    padding: 2%;    
+    
     
   }
   .box{
@@ -82,7 +85,7 @@
     min-width: 95%;
     place-items: center;
     padding: 0;
-    margin: 5px;
+    margin: 2%;
   }
   .l-box {
     display: none ;
@@ -121,8 +124,8 @@
       font-size: .9rem;
     }
 }
- 
-@media  (max-width: 1080px) {
+/*
+@media  screen and (min-width: 1080px) {
 
   body{      
     display: flex;
@@ -212,4 +215,4 @@
  
 
 } 
-
+*/
